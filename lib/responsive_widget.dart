@@ -8,14 +8,14 @@ part 'get_device_type.dart';
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget Function(BuildContext context, DeviceInfo deviceInfo) builder;
-
-  const ResponsiveWidget({Key key, this.builder}) : super(key: key);
+  final double width, height;
+  const ResponsiveWidget({Key key, this.builder,this.width, this.height}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
     return Container(
-      width: mediaQuery.size.width,
-      height: mediaQuery.size.height,
+      width: width ?? mediaQuery.size.width,
+      height: height ?? mediaQuery.size.height,
       child: LayoutBuilder(
         builder: (context, constraints) {
           var deviceInfo = DeviceInfo(
