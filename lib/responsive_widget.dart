@@ -14,8 +14,8 @@ class ResponsiveWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
     return Container(
-      width: width ?? mediaQuery.size.width,
-      height: height ?? mediaQuery.size.height,
+    /*  width: width ?? mediaQuery.size.width,
+      height: height ?? mediaQuery.size.height,*/
       child: LayoutBuilder(
         builder: (context, constraints) {
           var deviceInfo = DeviceInfo(
@@ -30,8 +30,7 @@ class ResponsiveWidget extends StatelessWidget {
               mediaQuery: mediaQuery
           );
           return Container(
-              height: mediaQuery.size.height,
-              width: mediaQuery.size.width,
+
               child: builder(context, deviceInfo));
         },
       ),
