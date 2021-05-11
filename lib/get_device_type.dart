@@ -3,13 +3,10 @@ part of responsive_widget;
 DeviceType getDeviceType(MediaQueryData mediaQueryData) {
   Orientation orientation = mediaQueryData.orientation;
   double width = 0;
-  switch (orientation) {
-    case Orientation.landscape:
-      width = mediaQueryData.size.height;
-      break;
-    case Orientation.portrait:
-      width = mediaQueryData.size.width;
-      break;
+  if(orientation==Orientation.landscape){
+    width = mediaQueryData.size.height;
+  }else{
+   width = mediaQueryData.size.width;
   }
   if (width >= 900) {
     return DeviceType.Desktop;
