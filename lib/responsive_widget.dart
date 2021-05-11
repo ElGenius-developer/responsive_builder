@@ -2,6 +2,8 @@
 library responsive_widget;
 
 import 'package:flutter/material.dart';
+ import 'dart:io';
+
 part 'device_info.dart';
 part 'device_type_enum.dart';
 part 'get_device_type.dart';
