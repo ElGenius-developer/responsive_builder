@@ -11,17 +11,17 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData) {
       width = mediaQueryData.size.width;
       break;
   }
-  if (width > 900) {
+  if (width >= 900) {
     return DeviceType.Desktop;
   } 
- else  if (width > 600 && width < 900 ) {
+    if (width > 600 && width < 900 ) {
     return DeviceType.Tablet;
   } 
-  else if(width >200 && width < 600 ){
+    if(width >200 && width < 600 ){
     return DeviceType.Mobile;
    }
-  else  {
+
     return DeviceType.Watch;
-  } 
+  
   
 }
