@@ -8,6 +8,9 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData) {
       if (Platform.isAndroid || Platform.isIOS) {
         width = mediaQueryData.size.height;
       }
+    }else{
+              width = mediaQueryData.size.width;
+
     }
   } catch (error) {
         width = mediaQueryData.size.width;
