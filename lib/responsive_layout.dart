@@ -9,7 +9,8 @@ class ResponsiveLayout extends StatelessWidget {
       {required this.desktop, required this.mobile, required this.tablet , this.watch});
   @override
   Widget build(BuildContext context) {
-    final deviceType = getDeviceType(MediaQuery.of(context));
+    final DeviceType deviceType = getDeviceType(MediaQuery.of(context));
+    print(deviceType);
     switch (deviceType) {
       case DeviceType.Mobile:
         return mobile;
