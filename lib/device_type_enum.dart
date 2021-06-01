@@ -1,4 +1,4 @@
-part of responsive_widget;
+part of responsive_builder;
 
 enum DeviceType{
   Mobile,

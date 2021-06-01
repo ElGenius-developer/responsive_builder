@@ -1,5 +1,5 @@
 
-library responsive_widget;
+library responsive_builder;
 
 import 'package:flutter/material.dart';
  import 'dart:io';
