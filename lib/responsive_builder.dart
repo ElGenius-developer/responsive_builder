@@ -5,10 +5,10 @@ part 'device_info.dart';
 part 'get_device_type.dart';
 part 'responsive_layout.dart';
 part 'device_type_enum.dart';
-class ResponsiveWidget extends StatelessWidget {
+class ResponsiveBuilder extends StatelessWidget {
   final Widget Function(BuildContext context, DeviceInfo deviceInfo)? builder;
   final double? width, height;
-  const ResponsiveWidget({Key? key, this.builder, this.width, this.height})
+  const ResponsiveBuilder({Key? key, this.builder, this.width, this.height})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
