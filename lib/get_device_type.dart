@@ -8,12 +8,11 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData) {
       if (Platform.isAndroid || Platform.isIOS) {
         width = mediaQueryData.size.height;
       }
-    }else{
-              width = mediaQueryData.size.width;
-
+    } else {
+      width = mediaQueryData.size.width;
     }
   } catch (error) {
-        width = mediaQueryData.size.width;
+    width = mediaQueryData.size.width;
   }
   if (width >= 900) {
     return DeviceType.Desktop;

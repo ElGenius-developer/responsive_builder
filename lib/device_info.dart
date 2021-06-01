@@ -1,5 +1,6 @@
 part of responsive_builder;
 
+
 class DeviceInfo {
   final Orientation? orientation;
   final DeviceType? deviceType;
@@ -15,5 +16,6 @@ class DeviceInfo {
       this.screenHeight,
       this.screenWidth,
       this.localHeight,
-      this.localWidth,this.mediaQuery});
+      this.localWidth,
+      this.mediaQuery});
 }
