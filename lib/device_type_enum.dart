@@ -1,2 +1,2 @@
-part of '../responsive_builder.dart';
+part of responsive_builder;
 enum DeviceType { Mobile, Tablet, Desktop, Watch }

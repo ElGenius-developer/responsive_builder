@@ -1,5 +1,6 @@
-part of '../responsive_builder.dart';
- class DeviceInfo {
+part of responsive_builder;
+ 
+class DeviceInfo {
   final Orientation? orientation;
   final DeviceType? deviceType;
   final double? screenHeight;

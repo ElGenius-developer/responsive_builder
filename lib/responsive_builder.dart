@@ -1,10 +1,10 @@
 library responsive_builder;
 import 'package:flutter/material.dart';
 import 'dart:io';
-part 'responsive_files/device_info.dart';
-part 'responsive_files/device_type_enum.dart';
-part 'responsive_files/get_device_type.dart';
-part 'responsive_files/responsive_layout.dart';
+part 'device_info.dart';
+part 'device_type_enum.dart';
+part 'get_device_type.dart';
+part 'responsive_layout.dart';
 class ResponsiveBuilder extends StatelessWidget {
   final Widget Function(BuildContext context, DeviceInfo deviceInfo)? builder;
   const ResponsiveBuilder({Key? key, this.builder,})

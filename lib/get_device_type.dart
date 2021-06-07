@@ -1,4 +1,4 @@
-part of'../responsive_builder.dart';
+part of responsive_builder;
 
 DeviceType getDeviceType(MediaQueryData mediaQueryData) {
   Orientation orientation = mediaQueryData.orientation;
