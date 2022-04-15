@@ -25,7 +25,6 @@ class ResponsiveBuilder extends StatelessWidget {
               deviceType: getDeviceType(
                 mediaQuery,
               ),
-              platform: getDevicePlatForm(widgetContext),
               screenHeight: mediaQuery.size.height,
               screenWidth: mediaQuery.size.width,
               localHeight: constraints.maxHeight,

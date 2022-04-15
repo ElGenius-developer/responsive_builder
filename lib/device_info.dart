@@ -7,16 +7,15 @@ class DeviceInfo {
   final double? screenWidth;
   final double? localHeight;
   final double? localWidth;
-  final DevicePlatform? platform;
   final MediaQueryData? mediaQuery;
 
-  DeviceInfo(
-      {this.orientation,
-      this.deviceType,
-      this.screenHeight,
-      this.screenWidth,
-      this.localHeight,
-      this.localWidth,
-      this.mediaQuery,
-      this.platform});
+  DeviceInfo({
+    this.orientation,
+    this.deviceType,
+    this.screenHeight,
+    this.screenWidth,
+    this.localHeight,
+    this.localWidth,
+    this.mediaQuery,
+  });
 }
