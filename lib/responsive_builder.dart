@@ -16,8 +16,8 @@ class ResponsiveBuilder extends StatelessWidget {
     this.builder,
   }) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    var mediaQuery = MediaQuery.of(context);
+  Widget build(BuildContext widgetContext) {
+    var mediaQuery = MediaQuery.of(widgetContext);
     return Container(
       child: LayoutBuilder(
         builder: (context, constraints) {
@@ -25,7 +25,7 @@ class ResponsiveBuilder extends StatelessWidget {
               deviceType: getDeviceType(
                 mediaQuery,
               ),
-              platform: getDevicePlatForm(context),
+              platform: getDevicePlatForm(widgetContext),
               screenHeight: mediaQuery.size.height,
               screenWidth: mediaQuery.size.width,
               localHeight: constraints.maxHeight,
