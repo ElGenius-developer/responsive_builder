@@ -1,6 +1,6 @@
 name: responsive_builder
-description: A new Flutter package project.
-version: 0.1.0
+description: this package used to create a responsive ui.
+version: 1.1.0
 homepage:
 
 environment:

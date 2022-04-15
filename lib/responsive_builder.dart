@@ -1,14 +1,20 @@
 library responsive_builder;
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 part 'device_info.dart';
-part 'device_type_enum.dart';
+part 'device_type_platform_enums.dart';
 part 'get_device_type.dart';
 part 'responsive_layout.dart';
+part 'get_device_platform.dart';
+
 class ResponsiveBuilder extends StatelessWidget {
   final Widget Function(BuildContext context, DeviceInfo deviceInfo)? builder;
-  const ResponsiveBuilder({Key? key, this.builder,})
-      : super(key: key);
+  const ResponsiveBuilder({
+    Key? key,
+    this.builder,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
@@ -19,6 +25,7 @@ class ResponsiveBuilder extends StatelessWidget {
               deviceType: getDeviceType(
                 mediaQuery,
               ),
+              platform: getDevicePlatForm(context),
               screenHeight: mediaQuery.size.height,
               screenWidth: mediaQuery.size.width,
               localHeight: constraints.maxHeight,

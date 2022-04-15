@@ -3,24 +3,22 @@ part of responsive_builder;
 DeviceType getDeviceType(MediaQueryData mediaQueryData) {
   Orientation orientation = mediaQueryData.orientation;
   double width = 0;
-  try {
-    if (orientation == Orientation.landscape) {
-      if (Platform.isAndroid || Platform.isIOS) {
-        width = mediaQueryData.size.height;
-      }
-    } else {
-      width = mediaQueryData.size.width;
+
+  if (orientation == Orientation.landscape) {
+    if (Platform.isAndroid || Platform.isIOS || Platform.isFuchsia) {
+      width = mediaQueryData.size.height;
     }
-  } catch (error) {
+  } else {
     width = mediaQueryData.size.width;
   }
-  if (width >= 900) {
+
+  if (width >= 950) {
     return DeviceType.Desktop;
   }
-  if (width > 600 && width < 900) {
+  if (width > 600) {
     return DeviceType.Tablet;
   }
-  if (width > 200 && width < 600) {
+  if (width > 200) {
     return DeviceType.Mobile;
   }
 
