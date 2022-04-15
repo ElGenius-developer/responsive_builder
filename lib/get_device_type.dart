@@ -7,11 +7,10 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData) {
   if (orientation == Orientation.landscape) {
     if (Platform.isAndroid || Platform.isIOS || Platform.isFuchsia) {
       width = mediaQueryData.size.height;
+    } else {
+      width = mediaQueryData.size.width;
     }
-  } else {
-    width = mediaQueryData.size.width;
   }
-
   if (width >= 900) {
     return DeviceType.Desktop;
   }
