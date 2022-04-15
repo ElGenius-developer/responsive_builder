@@ -13,9 +13,9 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData) {
   }
   if (width >= 900) {
     return DeviceType.Desktop;
-  } else if (width > 600) {
+  } else if (width >= 600 && width < 900) {
     return DeviceType.Tablet;
-  } else if (width > 200) {
+  } else if (width > 200 && width < 600) {
     return DeviceType.Mobile;
   } else
     return DeviceType.Watch;
