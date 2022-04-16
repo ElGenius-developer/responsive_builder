@@ -1,5 +1,4 @@
-part of responsive_builder;
-
+part of '../responsive_builder.dart';
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobile;
   final Widget desktop;
