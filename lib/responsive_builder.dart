@@ -20,6 +20,7 @@ class ResponsiveBuilder extends StatelessWidget {
     var mediaQuery = MediaQuery.of(widgetContext);
     return Container(
       child: LayoutBuilder(
+        //builder
         builder: (context, constraints) {
           var deviceInfo = DeviceInfo(
               deviceType: getDeviceType(
